@@ -5,33 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: #202124;
+            color: #bdc1c6;
+        }
+    </style>
 </head>
 <body>
     <div id="root">React is NOT rendered</div>
     <script src="https://unpkg.com/react@18.0.0-rc.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18.0.0-rc.0/umd/react-dom.development.js"></script>
-    <script>
-
-        const Person = props => {
-            return React.createElement('div', {}, [
-                React.createElement('h1', {}, props.name),
-                React.createElement('p', {}, props.occupation)
-            ]);
-        };
-
-        const App = () => {
-            return React.createElement('div', {}, [
-                React.createElement('h1', {class: 'title'}, "React IS rendered"),
-                React.createElement(Person, {name: 'Krzysztof', occupation: 'Software Engineer'}, null),
-                React.createElement(Person, {name: 'Sveta', occupation: 'QA Director'}, null),
-                React.createElement(Person, {name: 'Fenrir', occupation: 'Pet'}, null)
-            ]);
-        };
-
-        ReactDOM.render(
-            React.createElement(App), 
-            document.getElementById('root')
-        );
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>
